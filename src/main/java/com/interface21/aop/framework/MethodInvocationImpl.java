@@ -11,12 +11,14 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.aopalliance.AspectException;
-import org.aopalliance.AttributeRegistry;
-import org.aopalliance.Interceptor;
-import org.aopalliance.Invocation;
-import org.aopalliance.MethodInterceptor;
-import org.aopalliance.MethodInvocation;
+//import org.aopalliance.AspectException;
+//import org.aopalliance.AttributeRegistry;
+//import org.aopalliance.Interceptor;
+//import org.aopalliance.Invocation;
+//import org.aopalliance.MethodInterceptor;
+//import org.aopalliance.MethodInvocation;
+
+import org.aopalliance.intercept.*;
 
 
 /**
@@ -128,7 +130,8 @@ public class MethodInvocationImpl implements MethodInvocation {
 		 
 		s += (this.target == null) ? "target is null": 
 				"target is of class " + target.getClass().getName();
-		return s;				
+		return s;
+				
 	}
 
 

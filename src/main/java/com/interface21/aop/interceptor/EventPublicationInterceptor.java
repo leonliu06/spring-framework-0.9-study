@@ -1,8 +1,10 @@
 
 package com.interface21.aop.interceptor;
 
-import org.aopalliance.MethodInterceptor;
-import org.aopalliance.MethodInvocation;
+//import org.aopalliance.MethodInterceptor;
+//import org.aopalliance.MethodInvocation;
+
+import org.aopalliance.intercept.*;
 
 
 /**

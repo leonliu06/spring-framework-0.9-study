@@ -7,8 +7,10 @@ package com.interface21.aop.framework;
 
 import java.lang.reflect.Method;
 
-import org.aopalliance.AttributeRegistry;
-import org.aopalliance.MethodInterceptor;
+//import org.aopalliance.AttributeRegistry;
+//import org.aopalliance.MethodInterceptor;
+
+import org.aopalliance.intercept.*;
 
 /**
  * Interface to be implemented by objects that can cause

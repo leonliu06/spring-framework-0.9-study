@@ -4,8 +4,11 @@ import java.lang.reflect.InvocationTargetException;
 
 import javax.ejb.EJBLocalObject;
 
-import org.aopalliance.AspectException;
-import org.aopalliance.MethodInvocation;
+//import org.aopalliance.AspectException;
+//import org.aopalliance.MethodInvocation;
+
+import org.aopalliance.aop.AspectException;
+import org.aopalliance.intercept.*;
 
 import com.interface21.aop.framework.AopUtils;
 import com.interface21.ejb.access.AbstractSlsbInvokerInterceptor;
@@ -31,7 +34,7 @@ public class LocalSlsbInvokerInterceptor extends AbstractSlsbInvokerInterceptor 
 
 	/**
 	 * This is the last invoker in the chain
-	 * @see org.aopalliance.MethodInterceptor#invoke(org.aopalliance.Invocation)
+	 * //@see org.aopalliance.intercept.MethodInterceptor#invoke(org.aopalliance.intercept.Invocation)
 	 */
 	public Object invoke(MethodInvocation invocation) throws Throwable {
 		EJBLocalObject ejb = newSessionBeanInstance();

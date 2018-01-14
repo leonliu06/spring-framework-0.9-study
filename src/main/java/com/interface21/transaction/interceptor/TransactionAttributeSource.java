@@ -5,7 +5,8 @@
  
 package com.interface21.transaction.interceptor;
 
-import org.aopalliance.MethodInvocation;
+//import org.aopalliance.MethodInvocation;
+import org.aopalliance.intercept.*;
 
 import com.interface21.transaction.interceptor.TransactionAttribute;
 
@@ -22,9 +23,9 @@ public interface TransactionAttributeSource {
 	/**
 	 * Return the transaction attribute for this method.
 	 * Return null if the method is non-transactional.
-	 * @param clazz class we're interested in. May not be the same
+	 * //@param clazz class we're interested in. May not be the same
 	 * as the declaring class of the method. May not be null.
-	 * @param m Method we're interested in. May not be null.
+	 * //@param m Method we're interested in. May not be null.
 	 * @return TransactionAttribute transaction attribute or null.
 	 */
 	TransactionAttribute getTransactionAttribute(MethodInvocation invocation);

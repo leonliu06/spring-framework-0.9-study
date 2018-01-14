@@ -1,7 +1,8 @@
 package com.interface21.aop.interceptor;
 
-import org.aopalliance.MethodInterceptor;
-import org.aopalliance.MethodInvocation;
+//import org.aopalliance.MethodInterceptor;
+//import org.aopalliance.MethodInvocation;
+import org.aopalliance.intercept.*;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -25,7 +26,8 @@ public class PerformanceMonitorInterceptor implements MethodInterceptor {
 
 		StopWatch sw = new StopWatch();
 		sw.start(invocation.getMethod().getName());
-		Object rval = invocation.invokeNext();
+		//Object rval = invocation.invokeNext();
+		Object rval = invocation.proceed();
 		sw.stop();
 
 		logger.info(sw.prettyPrint());

@@ -5,8 +5,9 @@
 
 package com.interface21.transaction.interceptor;
 
-import org.aopalliance.MethodInterceptor;
-import org.aopalliance.MethodInvocation;
+//import org.aopalliance.MethodInterceptor;
+//import org.aopalliance.MethodInvocation;
+import org.aopalliance.intercept.*;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -94,7 +95,7 @@ public class TransactionInterceptor implements MethodInterceptor {
 	}
 
 	/**
-	 * @see org.aopalliance.MethodInterceptor#invoke(org.aopalliance.MethodInvocation)
+	 * //@see org.aopalliance.MethodInterceptor#invoke(org.aopalliance.MethodInvocation)
 	 */
 	public final Object invoke(MethodInvocation invocation) throws Throwable {
 		// If this is null, the method is non-transactional
@@ -111,7 +112,8 @@ public class TransactionInterceptor implements MethodInterceptor {
 			status = this.transactionManager.getTransaction(transAtt);
 			
 			// Make the TransactionStatus available to callees
-			invocation.setResource(TRANSACTION_STATUS_ATTACHMENT_NAME, status);
+			//invocation.setResource(TRANSACTION_STATUS_ATTACHMENT_NAME, status);
+			System.out.println("xxxx");
 		}
 		else {
 			// It isn't a transactional method
@@ -125,7 +127,8 @@ public class TransactionInterceptor implements MethodInterceptor {
 		// Invoke the next interceptor in the chain.
 		// This will normally result in a target object being invoked.
 		try {
-			Object retVal = invocation.invokeNext();
+			//Object retVal = invocation.invokeNext();
+			Object retVal = invocation.proceed();
 			if (status != null) {
 				logger.info("COMMITING transaction on method '" + invocation.getMethod().getName() + "'");
 				this.transactionManager.commit(status);
@@ -150,7 +153,8 @@ public class TransactionInterceptor implements MethodInterceptor {
 		}
 		finally {
 			if (transAtt != null) {
-				invocation.setResource(TRANSACTION_STATUS_ATTACHMENT_NAME, null);
+				//invocation.setResource(TRANSACTION_STATUS_ATTACHMENT_NAME, null);
+				System.out.println("xxx");
 			}
 		}
 	}

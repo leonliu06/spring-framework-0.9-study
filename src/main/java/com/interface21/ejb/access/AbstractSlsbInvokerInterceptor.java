@@ -5,7 +5,9 @@
  
 package com.interface21.ejb.access;
 
-import org.aopalliance.MethodInterceptor;
+//import org.aopalliance.MethodInterceptor;
+
+import org.aopalliance.intercept.*;
 
 import com.interface21.beans.BeanWrapper;
 import com.interface21.beans.BeanWrapperImpl;

@@ -37,7 +37,9 @@ public class HessianServiceExporter implements Controller {
 	 * Typically populated via a bean reference.
 	 */
 	public void setService(Object service) {
-		this.skeleton = new HessianSkeleton(service);
+		//this.skeleton = new HessianSkeleton(service);
+		this.skeleton = new HessianSkeleton(service.getClass());
+
 	}
 
 	/**

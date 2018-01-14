@@ -1,8 +1,9 @@
 package com.interface21.orm.hibernate;
 
 import net.sf.hibernate.SessionFactory;
-import org.aopalliance.MethodInterceptor;
-import org.aopalliance.MethodInvocation;
+//import org.aopalliance.MethodInterceptor;
+//import org.aopalliance.MethodInvocation;
+import org.aopalliance.intercept.*;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -107,7 +108,8 @@ public class HibernateInterceptor implements MethodInterceptor {
 			logger.debug("Found thread-bound Session for Hibernate interceptor");
 		}
 		try {
-			Object retVal = methodInvocation.invokeNext();
+			//Object retVal = methodInvocation.invokeNext();
+			Object retVal = methodInvocation.proceed();
 			if (this.forceFlush || sessionHolder != null) {
 				SessionHolder flushHolder = (SessionHolder) SessionFactoryUtils.getThreadObjectManager().getThreadObject(this.sessionFactory);
 				flushHolder.getSession().flush();

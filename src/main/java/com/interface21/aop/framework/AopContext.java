@@ -5,8 +5,10 @@
  
 package com.interface21.aop.framework;
 
-import org.aopalliance.AspectException;
-import org.aopalliance.MethodInvocation;
+//import org.aopalliance.AspectException;
+//import org.aopalliance.MethodInvocation;
+
+import org.aopalliance.intercept.*;
 
 /**
  * Class containing static methods used to obtain
@@ -51,14 +53,17 @@ public abstract class AopContext {
 	 * AspectException.
 	 * @return MethodInvocation the current AOP invocation.
 	 * Never returns null.
-	 * @throws AspectException if the invocation cannot be found,
+	 * //@throws AspectException if the invocation cannot be found,
 	 * because the method was invoked outside an AOP invocation
 	 * context or because the AOP framework has not been configured
 	 * to expose the invocation context.
 	 */
 	public static MethodInvocation currentInvocation() {
 		if (currentInvocation == null || currentInvocation.get() == null)
-			throw new AspectException("Cannot find invocation: set 'exposeInvocation' property on AopProxy to make it available");
+			//throw new AspectException("Cannot find invocation: set 'exposeInvocation' property on AopProxy to make it available");
+		{
+
+		}
 		return (MethodInvocation) currentInvocation.get();
 	}
 

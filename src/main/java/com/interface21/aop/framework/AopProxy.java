@@ -91,7 +91,8 @@ public class AopProxy implements InvocationHandler {
 									method.getDeclaringClass(), //?
 									method, args,
 									this.config.getMethodPointcuts(), // could customize here
-									this.config.getAttributeRegistry());
+									//this.config.getAttributeRegistry());
+									null);
 		
 		if (this.config.getExposeInvocation()) {
 			// Make invocation available if necessary

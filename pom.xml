@@ -8,4 +8,163 @@
     <artifactId>spring-framework-0.9-study</artifactId>
     <version>0.9</version>
 
+
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.aopalliance/com.springsource.org.aopalliance -->
+        <dependency>
+            <groupId>org.aopalliance</groupId>
+            <artifactId>com.springsource.org.aopalliance</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.ejb/ejb-api -->
+        <dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>ejb-api</artifactId>
+            <version>3.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.caucho/burlap -->
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>burlap</artifactId>
+            <version>2.1.12</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/javax.jdo/jdo-api -->
+        <dependency>
+            <groupId>javax.jdo</groupId>
+            <artifactId>jdo-api</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.lowagie/itext -->
+        <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/net.sf.hibernate/hibernate -->
+        <dependency>
+            <groupId>net.sf.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+            <version>2.1.8</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.velocity/velocity -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.6.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.15</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.jms/jms -->
+        <dependency>
+            <groupId>javax.jms</groupId>
+            <artifactId>jms</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.aopalliance/com.springsource.org.aopalliance &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.aopalliance</groupId>-->
+            <!--<artifactId>com.springsource.org.aopalliance</artifactId>-->
+            <!--<version>1.0.0</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.glassfish.hk2.external/aopalliance-repackaged &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.glassfish.hk2.external</groupId>-->
+            <!--<artifactId>aopalliance-repackaged</artifactId>-->
+            <!--<version>2.2.0</version>-->
+        <!--</dependency>-->
+
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.servicemix.bundles</groupId>-->
+            <!--<artifactId>org.apache.servicemix.bundles.aopalliance</artifactId>-->
+            <!--<version>1.0_6</version>-->
+        <!--</dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/spring/spring-aopalliance -->
+        <!--<dependency>-->
+            <!--<groupId>spring</groupId>-->
+            <!--<artifactId>spring-aopalliance</artifactId>-->
+            <!--<version>1.0</version>-->
+        <!--</dependency>-->
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.4</source>
+                    <target>1.4</target>
+                    <encoding>ISO-8859-1</encoding>
+
+                    <compilerArguments>
+                        <verbose />
+                        <extdirs>${project.basedir}/lib</extdirs>
+
+                        <!--<arg>-verbose</arg>-->
+                        <!--<arg>-extdirs</arg>-->
+                        <!--<arg>${project.basedir}/lib</arg>-->
+
+                    </compilerArguments>
+
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
 </project>

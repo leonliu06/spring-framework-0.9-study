@@ -3,10 +3,12 @@ package com.interface21.aop.framework;
 
 import java.lang.reflect.InvocationTargetException;
 
-import org.aopalliance.AspectException;
-import org.aopalliance.MethodInterceptor;
-import org.aopalliance.MethodInvocation;
-import org.aopalliance.ProxyInterceptor;
+//import org.aopalliance.AspectException;
+//import org.aopalliance.MethodInterceptor;
+//import org.aopalliance.MethodInvocation;
+//import org.aopalliance.ProxyInterceptor;
+
+import org.aopalliance.intercept.*;
 
 /**
  * Implementation of Interceptor interface that 

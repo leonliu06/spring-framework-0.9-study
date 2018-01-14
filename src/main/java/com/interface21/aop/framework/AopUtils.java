@@ -4,7 +4,8 @@ package com.interface21.aop.framework;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.aopalliance.Invocation;
+//import org.aopalliance.Invocation;
+import org.aopalliance.intercept.*;
 
 /**
  * Utility methods used by the AOP framework.

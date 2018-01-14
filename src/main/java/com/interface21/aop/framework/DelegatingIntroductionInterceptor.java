@@ -8,9 +8,11 @@ package com.interface21.aop.framework;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.aopalliance.MethodInvocation;
+import org.aopalliance.intercept.MethodInvocation;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+//import org.aopalliance.intercept.MethodInvocation;
 
 /**
  * All subclasses need to do is extend this and
